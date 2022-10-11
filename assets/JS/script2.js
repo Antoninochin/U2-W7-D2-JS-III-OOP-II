@@ -1,8 +1,8 @@
 class Page {
 
-    constructor(name){
-    this.items = [name]
-    this.pageSize = []
+    constructor(items = [], pageSize = 0){
+    this.items = items
+    this.pageSize = pageSize
     }
 
 }
@@ -25,6 +25,7 @@ function add(event){
         let ul = document.createElement('ul')
         list.appendChild('ul')
     for(let i = 0; i < lists.length; i++){
+        
         let li = document.createElement('li')
         ul.appendChild('li')
         li.innerText = lists.name[i]
